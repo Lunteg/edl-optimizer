@@ -326,8 +326,8 @@ If you use this code, please cite:
   month        = sep,
   year         = 2026,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.22075827},
-  url          = {https://doi.org/10.5281/zenodo.22075827}
+  doi          = {10.5281/zenodo.22075826},
+  url          = {https://doi.org/10.5281/zenodo.22075826}
 }
 ```
 
