@@ -1,12 +1,13 @@
 # EDL Optimizer: Certified Face-Enumeration for Regularized Dirichlet Likelihood
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22075827.svg)](https://doi.org/10.5281/zenodo.22075827)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Official implementation of the paper:
 
 > **"Geometry of Regularized Dirichlet Likelihood: Structural Theorem, SOSC Characterization, and Certified Face-Enumeration Algorithm"**
-> Danila Ozerov, Alexey Bogomolov, Valim Kushnikov
-> (submitted to *Computational Optimization and Applications*, 2026)
+> Danila Ozerov, Alexey Bogomolov, Vadim  Kushnikov
+> (submitted to *Machine Learning*, 2026)
 
 ## What is this?
 
@@ -128,10 +129,10 @@ Wall-clock time comparison (median of 30 runs) for $K \in \{10, 50, 100, 500\}$.
 ```text
 K      Alg.1 (ms)     L-BFGS-B (ms)    Speedup   L-BFGS-B Acc.
 ----------------------------------------------------------------------
-10         4.27          5.65          1.3x       65.3%
-50        17.91         19.92          1.1x       70.5%
-100       35.54         39.63          1.1x       74.0%
-500      175.14        361.89          2.1x       86.0%
+10         4.53          5.79          1.3x       65.3%
+50        18.91         19.72          1.0x       70.5%
+100       36.88         40.40          1.1x       74.0%
+500      183.05        372.39          2.0x       86.0%
 ```
 
 ### Statistical Verification (Bootstrap + Sensitivity)
@@ -284,6 +285,26 @@ All experiments are fully reproducible with a fixed random seed (`seed=42`) acro
 
 Wall-clock timings may vary slightly across hardware runs; accuracy and speedup trends are stable.
 
+### Reproducing the Paper's Figures
+
+```bash
+python experiments/generate_figures.py
+```
+Generates publication-quality vector graphics (PDF) for Figures 1, 2, and 3.
+
+- Fig. 1: Self-consistency functions $g_p(S)$ illustrating the thresholding structure.
+- Fig. 2: Evidence Ceiling effect on 5000 synthetic logits.
+- Fig. 3: Wall-clock time scalability benchmark.
+
+```bash
+python experiments/analyze_figures.py
+```
+
+Prints detailed numerical data, KKT admissibility checks for Fig. 1 roots, and exact median timings used in Table 4.
+
+
+
+
 ## Citation
 
 If you use this code, please cite:
@@ -293,10 +314,20 @@ If you use this code, please cite:
   title   = {Geometry of Regularized Dirichlet Likelihood:
              Structural Theorem, {SOSC} Characterization,
              and Certified Face-Enumeration Algorithm},
-  author  = {Ozerov, Danila and Bogomolov, Alexey and Kushnikov, Valim},
-  journal = {Computational Optimization and Applications},
+  author  = {Ozerov, Danila and Bogomolov, Alexey and Kushnikov, Vadim },
+  journal = {Machine Learning},
   year    = {2026},
   note    = {to appear}
+}
+
+@dataset{Ozerov2026EDLData,
+  author       = {Ozerov, Danila and Bogomolov, Aleksey and Kushnikov, Vadim},
+  title        = {{Supporting Data and Code for: Geometry of Regularized Dirichlet Likelihood}},
+  month        = sep,
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22075827},
+  url          = {https://doi.org/10.5281/zenodo.22075827}
 }
 ```
 
