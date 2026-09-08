@@ -1,6 +1,6 @@
 # EDL Optimizer: Certified Face-Enumeration for Regularized Dirichlet Likelihood
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22075827.svg)](https://doi.org/10.5281/zenodo.22075827)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22075826.svg)](https://doi.org/10.5281/zenodo.22075826)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Official implementation of the paper:
